@@ -19,7 +19,8 @@ DemoApp.Models = DemoApp.Models || {};
         },
 
         parse: function(r, options)  {
-          return r.todo;
+          if(options.parseModel == false) { return r; }
+          return r.todo; // we use this only when we call Todo.fetch
         }
     });
 
