@@ -46,7 +46,7 @@ ContactManager.module("ContactsApp.List", function(List, ContactManager, Backbon
     showContact: function(e) {
       e.preventDefault();
       e.stopPropagation();
-      this.trigger('contact:show', this.model);
+      ContactManager.trigger('contact:show', this.model.escape('id'));
     }
   });
   List.Contacts = Marionette.CompositeView.extend({

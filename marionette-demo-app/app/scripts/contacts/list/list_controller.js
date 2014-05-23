@@ -9,13 +9,13 @@ ContactManager.module('ContactsApp.List', function(List, ContactManager) {
         });
       contactListView.on('itemview:contact:highlighted',
         function(childView, model) {
-          console.log(model.escape('firstName') + ' was highlighted!!!');
+          //console.log(model.escape('firstName') + ' was highlighted!!!');
         });
-      contactListView.on('itemview:contact:show',
-        function(childView, model) {
-          //delegates the event
-          ContactManager.ContactsApp.Show.Controller.showContact(model);
-        });
+//      contactListView.on('itemview:contact:show',
+//        function(childView, model) {
+//          //delegates the event
+//          ContactManager.ContactsApp.Show.Controller.showContact(model);
+//        });
       ContactManager.contactsRegion.show(contactListView);
     }
   }
